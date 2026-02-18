@@ -139,7 +139,8 @@ else:
     if "margin_sweep" in stats:
         sweep_data = stats["margin_sweep"]
         selected_ratio = sweep_data["selected_margin_ratio"]
-        st.subheader(f"Margin ratio sweep  *(selected: {selected_ratio}x)*")
+        st.subheader(f"Voronoi Diagram based Margin ratio sweep  *(selected: {selected_ratio}x)*")
+        st.text("The assigned values from this is only used if bead was filtered in Stardist method. This ensembling of bead results with stardist typically increases valid% by 3-10% and increase invalid by 0-2% compared to using Stardist alone.")
         rows = [
             {
                 "Ratio": f"{v['min_margin_ratio']}x" + (" ✓" if v["min_margin_ratio"] == selected_ratio else ""),
