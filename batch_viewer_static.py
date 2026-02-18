@@ -22,8 +22,8 @@ def calc_invalid_pct(s):
 
 # Sidebar
 with st.sidebar:
-    dataset_label = st.radio("Dataset", ["Previous", "Latest"])
-    dataset_key = "latest" if dataset_label == "Latest" else "previous"
+    dataset_label = st.radio("Dataset", ["Latest", "Previous"])
+    dataset_key = "previous" if dataset_label == "Previous" else "latest"
     all_stats = data[dataset_key]
 
     st.markdown("---")
